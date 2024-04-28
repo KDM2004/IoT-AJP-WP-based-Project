@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script>
+       let selectedOption;
+        let selectedLink;
+        
+        function selectOption(option, link) {
+            selectedOption = option;
+            selectedLink = link;
+            document.getElementById('selected-option').textContent = option;
+        }
+        
+        function submitSelection() {
+            if (selectedLink) {
+                window.location.href = selectedLink;
+            }
+        }
+</script>
+
+<style>
+     body {
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 23px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            max-height: 150px; /* Set a maximum height for the dropdown content */
+            overflow-y: auto; /* Enable vertical scrollbar */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            color: black;
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .submit-btn {
+            display: grid;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 6px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 35px;
+        }
+
+
+:root {
+    
+    color:white;
+    }
+    
+    /*Extra Large screens - Extra large desktops*/
+    
+    /*General CSS and CSS reset*/
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    section{
+        margin-top: 46px;
+    }
+    
+    .hero{
+        background-image:url("images/s.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        
+    
+        
+    }
+    .hero-text{
+        background-color: rgba(4,7,32,0.5);
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1,h2,h3,h4,h5,h6{
+        color:white;
+        
+        text-shadow: 8px 10px 10px #000000;
+        border-top:none;
+        border-bottom: none;
+        padding: 90px 30px;
+        text-transform: uppercase;
+        font-size: 60px;
+        font-weight: 400;
+        
+    }
+    .about{
+        
+        height: 700px;
+        background-image: url("images/s.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        background-position: center;
+        
+    
+        
+    }
+    .icons{
+        font-size: 20px;
+        letter-spacing: 5px;
+    
+    }
+    .title{
+        color:white;
+        width:100%;
+        margin:auto;
+        padding:60px 10px;
+        font-size: 50px;
+        font-weight: 600;
+        margin-left: 10%;
+        text-transform: uppercase;
+        width: 80%; 
+        
+    }
+    .about-main{
+        width: 90%;
+         
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .about-text{
+        background-color: rgb(16, 19, 47);
+        padding: 30px ;
+        width:500px;
+        
+    }
+    
+    h3{
+        font-size: 40px;
+        
+        font-weight: 600;
+        
+    }
+    h4{
+        text-transform: uppercase;
+    }
+    #navDemo a{
+        font-size: 12px;
+    }
+    
+    
+    /*MEDIA QUERIES*/
+    /*Large screens - Desktop*/
+    @media screen and (min-width: 1700px) {
+        section{
+            background-color: rgba(4,7,32,0.9);
+        }
+        .hero{
+            
+            margin: auto;
+            height: 900px;
+        }
+        .hero-text{
+            height: 900px;
+        }
+    }
+    
+    /*medium screens - Laptops*/
+    @media screen and (max-width: 1024px) {
+        .hero{
+            background-image:url("images/s.jpg");
+            height: 500px;
+            background-position: center;
+        }
+        .hero-text{
+            height: 500px;
+        }
+        h1{
+            font-size: 70px;
+        }
+    }
+    
+    /*Small screens - tablets*/
+    @media screen and (max-width: 768px) {
+        .hero{
+            background-image:url("images/s.jpg");
+            height: 600px;
+            background-position: center;
+        }
+        .hero-text{
+            height: 600px;
+        }
+        h1{
+            font-size: 60px;
+        }
+        .about{
+            overflow: hidden;
+        }
+        .about-text{
+            background-color: rgba(4,7,32,.5);
+            
+        }
+        .card{
+            width: 90%;;
+        }
+        .card-list{
+            width: 250px;
+        }
+        .title{
+            font-size: 36px;
+        }
+    }
+    
+    /*Extra small screens - phones*/
+    @media screen and (max-width: 480px) {
+        .hero{
+            background-image:url("images/s.jpg");
+            height: 500px;
+            background-position: center;
+            
+    
+        }
+        .hero-text{
+            height: 500px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        .about-text{
+            background-color: rgba(4,7,32,.3);
+            
+        }
+        .title{
+        font-size: 30px; 
+        padding:30px 10px;  
+        
+        }
+        h3{
+            font-size: 25px;
+        }
+        .about{
+            height: 500px;;
+            overflow: hidden;
+            background-position-x:left ;
+        
+        }
+        .card{
+            width: 100%;;
+        }
+        .card-list{
+            width: 300px;
+        }
+    }
+    </style>
+    <title>Smart Lighting System</title>
+
+</head>
+<body>
+    <div>
+        <!-- Navbar -->
+        <div class="w3-top w3-text-white w3-black">
+            <div class="w3-bar  ">
+              <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+              <a href="index.html" class="w3-bar-item w3-button w3-padding-large"><b>Smart Lighting System by KKH</b></a>
+              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><b>CONTACT US on: smartlighting@gmail.com/890XXXXXXX</b></a>
+              <a href="about us.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><b> ABOUT US</b></a>
+              <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><b> LOGOUT</b></a>
+            </div>
+          </div>
+  
+          <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+          <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+            <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT US on: smartlighting@gmail.com/890XXXXXXX</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT US</a>
+            <a href="Landing Page.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LOGOUT</a>
+          </div>
+    </div>
+    <section id="home">
+        <div class="hero">
+         <div class="hero-text">
+            <div class="dropdown">
+                <span id="selected-option"><b> Select the Lighting System you are looking For </b></span>
+                <div class="dropdown-content">
+                    <a href="Auditorium Hall.html" onclick="selectOption('Smart Lighting system of Auditorium Hall', 'https://media.istockphoto.com/id/931042070/vector/website-construction-line-style-illustration.jpg?s=612x612&w=0&k=20&c=nEB37_J5y3j08MKqhAGlgK7OmBwPFoEsU_JuTrOaIh4=')"><b>Smart Lighting system of Auditorium Hall</b></a>
+                    <a href="classroom.html" onclick="selectOption('Smart Lighting system of Classroom', 'https://media.istockphoto.com/id/931042070/vector/website-construction-line-style-illustration.jpg?s=612x612&w=0&k=20&c=nEB37_J5y3j08MKqhAGlgK7OmBwPFoEsU_JuTrOaIh4=')"><b> Smart Lighting system of Classroom</b></a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+</body>
+</html>

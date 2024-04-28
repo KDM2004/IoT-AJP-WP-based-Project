@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Light system</title>
+	<style>
+		body {
+			background-color: #f0f0f0;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		#stage {
+			position: relative;
+			width: 800px;
+			height: 40px;
+			margin: 0 auto;
+			background-color: #f4d0b0;
+			border: 1px solid #ccc;
+            border-radius: 40px;
+		}
+
+		#stage-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.light {
+			position: absolute;
+			width: 60px;
+			height: 50px;
+			background-color: #fff;
+			border-radius: 20px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			transition: background-color 0.2s ease-in-out;
+            margin-bottom: 50px;
+		}
+
+		#light-L1 {
+			top: 100px;
+			left: 100px;
+            margin-bottom: 10px;
+		}
+
+		#light-L2 {
+			top: 150px;
+			left: 100px;
+		}
+
+		#light-L3 {
+			top: 200px;
+			left: 300px;
+		}
+
+		#light-L4 {
+	top: 100px;
+			left: 500px;
+		}
+
+		#light-L5 {
+			top: 150px;
+			left: 500px;
+		}
+
+		#light-L6 {
+			top: 250px;
+			left: 100px;
+		}
+
+		#light-L7 {
+			top: 300px;
+			left: 100px;
+		}
+
+		#light-L8 {
+			top: 350px;
+			left: 100px;
+		}
+
+		#light-L9 {
+			top: 250px;
+			left: 500px;
+		}
+
+		#light-L10 {
+			top: 300px;
+			left: 500px;
+		}
+
+		.light-on {
+			background-color: rgb(144, 238, 144);
+		}
+	</style>
+</head>
+<body>
+	<h1>Smart Lighting System of Auditorium Hall</h1><br>
+	<div id="stage">
+		<div id="stage-text">Auditorium Stage</div>
+		<div id="light-L1" class="light" data-label="L1">L1</div>
+		<div id="light-L2" class="light" data-label="L2">L2</div>
+		<div id="light-L3" class="light" data-label="L3">L3</div>
+		<div id="light-L4" class="light" data-label="L4">L4</div>
+		<div id="light-L5" class="light" data-label="L5">L5</div>
+		<div id="light-L6" class="light" data-label="L6">L6</div>
+		<div id="light-L7" class="light" data-label="L7">L7</div>
+		<div id="light-L8" class="light" data-label="L8">L8</div>
+		<div id="light-L9" class="light" data-label="L9">L9</div>
+		<div id="light-L10" class="light" data-label="L10">L10</div>
+	</div>
+    <script>
+		document.querySelectorAll('.light').forEach(light => {
+			light.addEventListener('click', function () {
+				if (this.classList.contains('light-on')) {
+					this.classList.remove('light-on');
+				} else {
+					this.classList.add('light-on');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
