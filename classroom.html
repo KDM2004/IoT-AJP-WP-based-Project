@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Lighting Control</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<style>
+  body { text-align: center; }
+  .home-icon {
+    position: absolute; top: 0; left: 0; font-size: 24px; padding: 10px;
+  }
+  #stage {
+    margin: 20px auto; width: 100%; max-width: 220px; height: 30px;
+    background-color: #add8e6;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    border-radius: 30px;
+  }
+  .light {
+    width: 50px; height: 50px; background-color: #f4f4f4; cursor: pointer;
+    position: absolute; text-align: center; line-height: 50px; border-radius: 20px;
+  }
+  #L1 { top: 100px; left: 50px; }
+  #L2 { top: 100px; right: 50px; }
+  #L3 { top: 250px; left: calc(50% - 25px); }
+  #L4 { bottom: 50px; left: 50px; }
+  #L5 { bottom: 50px; right: 50px; }
+  .on { background-color: #90ee90; }
+</style>
+</head>
+<body>
+<a href="index.html"><i class="fas fa-home home-icon"></i></a>
+<h1>Smart Lighting System of Classroom</h1><br>
+<div id="stage">Classroom Board is Here</div>
+<div class="light" onclick="toggleLight(this)" id="L1">L1</div>
+<div class="light" onclick="toggleLight(this)" id="L2">L2</div>
+<div class="light" onclick="toggleLight(this)" id="L3">L3</div>
+<div class="light" onclick="toggleLight(this)" id="L4">L4</div>
+<div class="light" onclick="toggleLight(this)" id="L5">L5</div>
+
+<script>
+function toggleLight(element) {
+  element.classList.toggle('on');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.component-container {  
+  width: 80%;
+  margin: 0 auto;
+}
+
+.component {
+  width: 100%;
+  margin: 10px;
+  background-color: rgb(81, 75, 75, 0.7);
+  border-radius: 5px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.component:hover {
+  transform: rotate(4deg);
+}
+
+.component img {
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  width: 40%;
+  height: 40%; /* Adjust image height as needed */
+  object-fit: cover; /* Maintain image aspect ratio */
+}
+
+.text-content {
+  padding: 40px;
+  color: aliceblue;
+  flex: 1; /* Make text content fill remaining space */
+}
+
+.text-content h2 {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: aliceblue;
+}
+
+.main{
+  height: 50%;
+  width: 90%;
+  margin-left: 10%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<title>Smart Lighting System for Parking Lights</title>
+<style>
+  body { text-align: center; }
+  .home-icon {
+    position: absolute; top: 0; left: 0; font-size: 24px; padding: 10px;
+  }
+  .column { display: inline-block; vertical-align: top; margin: 5px; }
+  .light-switch {
+    width: 90px; height: 50px; background-color: #f4f4f4; cursor: pointer;
+    text-align: center; line-height: 50px; /* Center text */
+    display: block; margin: 2px auto; /* Center in column */
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  .on { background-color: #90ee90; } 
+</style>
+</head>
+<body>
+<a href="index.html"><i class="fas fa-home home-icon"></i></a>
+<h1>Smart Lighting System for Parking Lights</h1>
+
+<!-- Light switches -->
+<div class="column">
+  <!-- Repeat this pattern for L1 to L7 -->
+  <div class="light-switch" onclick="toggleLight(this)" id="L1">L1 - Slot 1</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L1">L1 - Slot 2</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L1">L1 - Slot 3</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L1">L1 - Slot 4</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L1">L1 - Slot 5</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L1">L1 - Slot 6</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L7">L7 - Slot 7</div>
+</div>
+<div class="column">
+  <!-- Repeat this pattern for L8 to L14 -->
+  <div class="light-switch" onclick="toggleLight(this)" id="L8">L8 - Slot 8</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L8">L8 - Slot 9</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L8">L8 - Slot 10</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L8">L8 - Slot 11</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L8">L8 - Slot 12</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L8">L8 - Slot 13</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L14">L14 - Slot 14</div>
+</div>
+<div class="column">
+  <!-- Repeat this pattern for L15 to L20 -->
+  <div class="light-switch" onclick="toggleLight(this)" id="L15">L15 - Slot 15</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L15">L15 - Slot 16</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L15">L15 - Slot 17</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L15">L15 - Slot 18</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L15">L15 - Slot 19</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L20">L20 - Slot 20</div>
+  <div class="light-switch" onclick="toggleLight(this)" id="L20">L21 - Slot 21</div>
+</div>
+
+
+<script>
+function toggleLight(element) {
+  element.classList.toggle('on');
+}
+</script>
+</body>
+</html>
